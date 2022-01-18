@@ -92,23 +92,16 @@ Enumeramos a continuación las métricas que vamos a utilizar:
 
 - `Precisión:` Se define como la división de los verdaderos positivos (TP) de entre todos los positivos predichos (TP + FP).En nuestro caso en particular, será este dato el que este desequilibrado, ya que hay una desproporcionalidad de la muestra de muertes y no muertes. 
 
-$$\frac{\textrm{TP}}{\textrm{TP+FP}}$$
-
-
 - `Recall:` Se define como todos los ejemplos predichos que pertenecen a una clase (TP) de entre todos los positivos predichos (TP + FN). 
 
-$$\frac{\textrm{TP}}{\textrm{TP+FN}}$$
-
-- [`Accuracy`](https://machinelearningmastery.com/failure-of-accuracy-for-imbalanced-class-distributions/): Es una metrica que resume el rendimiento de un modelo de clasificación con el número de predicciones correctas dividido por el número total de predicciones. Debido a que la predicción no es una métrica fiable, esta métrica tampoco lo será. 
-
-$$\frac{\textrm{TP+TN}}{\textrm{TP+TN+FP+FN}}$$
+- [`Accuracy`](https://machinelearningmastery.com/failure-of-accuracy-for-imbalanced-class-distributions/): Es una metrica que resume el rendimiento de un modelo de clasificación con el número de predicciones correctas dividido por el número total de predicciones. Debido a que la predicción no es una métrica fiable, esta métrica tampoco lo será.
 
 - [`Matriz de confusión:`](https://medium.com/analytics-vidhya/accuracy-on-imbalanced-datasets-and-why-you-need-confusion-matrix-937613bf89bf) La métrica mas simple y al mismo tiempo la más efectiva para mirar el desempeño de los modelos en casos de dataset imbalanceados. Nos muestra la relacción que existe entre positivos acertados (TP), positivos fallados (FN), negativos acertados(TN), y negativos fallados (FP). 
 
 
 - [`F1-Score:`](https://www.iartificial.net/precision-recall-f1-accuracy-en-clasificacion/) La F-Score combina las dos métricas de precisión y recall dentro de un mismo valor, añadiendo un parámetro `Beta`, que aplica un peso mayor a la precisión (Beta < 1) o un peso mayor al recall (Beta > 1). En nuestro caso, aplicaremos una F-1, ya que el peso lo aplicaremos en el modelo.
 
-$$2 \times\frac{\textrm{Precision} \times \textrm{Recall}}{\textrm{Precision} + \textrm{Recall}}$$
+ $$2 \times\frac{\textrm{Precision} \times \textrm{Recall}}{\textrm{Precision} + \textrm{Recall}}$$
     
    
 - [`La curva ROC:`](https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-imbalanced-classification/) Resume el rendimiento del modelo en la clase binaria positiva. Es una herramienta de diagnóstico popular para clasificadores en problemas de predicción binaria balanceados y desequilibrados por igual porque no está sesgada hacia la clase mayoritaria o minoritaria.
