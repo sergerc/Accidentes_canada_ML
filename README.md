@@ -36,24 +36,24 @@ Antes de realizar el modelo, debemos enfrentarnos al tratamiento del dataset, co
 ### *Ajuste y evaluación de los modelos*: 
 Una vez realizado el EDA y el preprocesamiento, tenemos dividida nuestra muestra entre train y test. Toca realizar los modelos de predicción del primero objetivo establecido, que es la detección de mortalidad en un accidente de trafico, por lo tanto nos encontramos ante un problema de clasificación (muerte, no muerte) del que queremos extraer una predicción en tanto porcentual.
 
-#### Arbol de decisión [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.1.%20Modelos%20%20DTC.ipynb): 
+#### 1. Arbol de decisión [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.1.%20Modelos%20%20DTC.ipynb): 
 
 - Hemos escogido el modelo de [`Árbol de decisión`](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html). Sabemos de primera mano que su poder predictivo esta limitado con respecto a otros pero lo hemos escogido debido a su facil implementación. 
 - Otra de las características por la que hemos elegido el arbol de decisión es porque suele ser un muy buen selector, es decir, nos puede indicar que variables son las que mas peso tienen con respecto a la variable objetivo. 
 
 Un [`árbol de decisión`](https://www.datacamp.com/community/tutorials/decision-tree-classification-python) es una estructura de árbol similar a un diagrama de flujo donde un nodo interno representa una característica (o atributo), la rama representa una regla de decisión y cada nodo hoja representa el resultado. El nodo superior en un árbol de decisiones se conoce como nodo raíz. Aprende a particionar sobre la base del valor del atributo. Divide el árbol de manera recursiva y lo llama partición recursiva. Esta estructura similar a un diagrama de flujo le ayuda en la toma de decisiones. Es una visualización como un diagrama de flujo que imita fácilmente el pensamiento a nivel humano. Es por eso que los árboles de decisión son fáciles de entender e interpretar.
 
-#### Modelo de Regresión Lineal [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.2.%20Modelos.%20Linear%20Regression.%20.ipynb)
+#### 2. Modelo de Regresión Lineal [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.2.%20Modelos.%20Linear%20Regression.%20.ipynb)
 [`Los modelos lineales`](https://www.ibm.com/docs/es/spss-modeler/SaaS?topic=node-linear-models) predicen un objetivo continuo basándose en relaciones lineales entre el objetivo y uno o más predictores.Los modelos lineales son relativamente simples y proporcionan una fórmula matemática fácil de interpretar para la puntuación. 
 
 Hay una gran variedad de modelos lineales. De hecho, ya hemos comentado anteriormente dos de ellos en el notebook de selección de variables [`2.0.4.Preprocesing`](http://localhost:8888/notebooks/Desktop/CUNEF/Practica%20Machine%20Learning/project_template/notebooks/2.0.4.%20Preprocesing.%20Seleccion%20de%20Variables..ipynb)
 
 [`El Modelo de regresión Logistica (RL)`](https://www.datacamp.com/community/tutorials/understanding-logistic-regression-python) : La regresión logística es un método estadístico para predecir clases binarias. El resultado o la variable objetivo es de naturaleza dicotómica. Dicotómico significa que solo hay dos clases posibles. Es un caso especial de regresión lineal donde la variable objetivo es de naturaleza categórica. Utiliza un registro de probabilidades como variable dependiente. La regresión logística predice la probabilidad de ocurrencia de un evento binario.
 
-#### Random Forest [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.3.%20Modelos%20RANDOM%20FOREST.ipynb)
+#### 3. Random Forest [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.3.%20Modelos%20RANDOM%20FOREST.ipynb)
 Un [`random forest`](https://towardsdatascience.com/understanding-random-forest-58381e0602d2) consta de una gran cantidad de arboles de decisión individuales que operan en conjunto. Cada árbol individual en el bosque aleatorio escupe una predicción de clase y la clase con más votos se convierte en la predicción de nuestro modelo. 
 
-#### Modelo XGBoost [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.4.%20Modelos.%20XGBOOST.ipynb)
+#### 4. Modelo XGBoost [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.4.%20Modelos.%20XGBOOST.ipynb)
 [`XGBoost`](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) Extreme Gradient Boosting es un algoritmo predictivo supervisado que utiliza el principio de boosting.
 
 La idea detrás del boosting es generar múltiples modelos de predicción “débiles” secuenciualmente,y que cada uno de estos tome los resultados del modelo anterior, para generar un modelo más “fuerte”, con mejor poder predictivo y mayor estabilidad en sus resultados.
@@ -66,10 +66,10 @@ Cada modelo es comparado con el anterior. Si un nuevo modelo tiene mejores resul
 
 Este proceso se repite hasta llegar a un punto en el que la diferencia entre modelos consecutivos es insignificante, lo cual nos indica que hemos encontrado el mejor modelo posible, o cuando se llega al número de iteraciones máximas definido por el usuario.
 
-#### Modelo LightGBM [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.5.%20Modelos%20LightGBM.ipynb)
+#### 5. Modelo LightGBM [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.5.%20Modelos%20LightGBM.ipynb)
 [`LightGBM`](https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc) es un algoritmo de refuerzo (o también de potenciación) de gradientes (gradient boosting) basado en modelos de árboles de decisión. Puede ser utilizado para la categorización, clasificación y muchas otras tareas de aprendizaje automático, en las que es necesario maximizar o minimizar una función objetivo mediante la técnica de gradient boosting, que consiste en combinar clasificadores sencillos, como por ejemplo árboles de decisión de profundidad limitada.
 
-#### Modelo Support Vector Machine [:bookmark_tabs: Link](http://localhost:8888/notebooks/Desktop/CUNEF/Practica_Machine_Learning/Practica-1-ML/notebooks/3.0.6.%20Modelos.%20SVM.ipynb)
+#### 6. Modelo Support Vector Machine [:bookmark_tabs: Link](http://localhost:8888/notebooks/Desktop/CUNEF/Practica_Machine_Learning/Practica-1-ML/notebooks/3.0.6.%20Modelos.%20SVM.ipynb)
 
 [`SVM`]( https://www.datacamp.com/community/tutorials/svm-classification-scikit-learn-python)ofrece una precisión muy alta en comparación con otros clasificadores, como la regresión logística y los árboles de decisión. `SVM` es un clasificador que separa los puntos de datos usando un hiperplano con el mayor margen posible, es por lo que tambien se le conoce como un clasificador discriminativo. SVM se encarga de encontrar el mejor hiperplano para clasificar. 
 
@@ -81,7 +81,7 @@ Parametros de [`SVM`](https://scikit-learn.org/stable/modules/svm.html):
 
 - Clash_weight: El peso que se le atribuye a cada clase. Probaremos. 
 
-#### Modelo Voting Classifier [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.7.%20Voting%20Classifier%20.ipynb)
+#### 7. Modelo Voting Classifier [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.7.%20Voting%20Classifier%20.ipynb)
 La idea detrás de un ([`VotingClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html)) es combinar clasificadores conceptualmente diferentes y utilizar un voto mayoritario (*hard*) o las probabilidades promedio pronosticadas (*soft-voting*) para predecir las etiquetas. 
 
 Este clasificador puede ser útil para un conjunto de modelos con un rendimiento igualmente bueno, a fin de equilibrar sus debilidades individuales.
