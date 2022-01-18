@@ -101,9 +101,6 @@ Enumeramos a continuación las métricas que vamos a utilizar:
 
 - [`F1-Score:`](https://www.iartificial.net/precision-recall-f1-accuracy-en-clasificacion/) La F-Score combina las dos métricas de precisión y recall dentro de un mismo valor, añadiendo un parámetro `Beta`, que aplica un peso mayor a la precisión (Beta < 1) o un peso mayor al recall (Beta > 1). En nuestro caso, aplicaremos una F-1, ya que el peso lo aplicaremos en el modelo.
 
- $$2 \times\frac{\textrm{Precision} \times \textrm{Recall}}{\textrm{Precision} + \textrm{Recall}}$$
-    
-   
 - [`La curva ROC:`](https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-imbalanced-classification/) Resume el rendimiento del modelo en la clase binaria positiva. Es una herramienta de diagnóstico popular para clasificadores en problemas de predicción binaria balanceados y desequilibrados por igual porque no está sesgada hacia la clase mayoritaria o minoritaria.
 
 
