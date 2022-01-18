@@ -15,23 +15,23 @@ del día/mes, nieve...? ¿a más días festivos o de vacaciones, más accidentes
 
 Podréis encontrar estos análisis en los siguientes notebook/html:
 
-  :page_facing_up: [analisis_EDA_severidad](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/1.1.analisis_EDA_Severidad.ipynb)
+  :page_facing_up: **[analisis_EDA_severidad](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/1.1.analisis_EDA_Severidad.ipynb)**
    
-  :page_facing_up: [analisis_EDA_Tratamiento_Medico](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/1.3.analisis_EDA_Agrupado_Severidad.%20.ipynb)
+  :page_facing_up: **[analisis_EDA_Tratamiento_Medico](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/1.3.analisis_EDA_Agrupado_Severidad.%20.ipynb)**
   
-  :page_facing_up: [analisis EDA_Agrupado_Severidad](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/1.3.analisis_EDA_Agrupado_Severidad.%20.ipynb)
+  :page_facing_up: **[analisis EDA_Agrupado_Severidad](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/1.3.analisis_EDA_Agrupado_Severidad.%20.ipynb)**
   
  
 ### *Tratamiento de datos:*
 Antes de realizar el modelo, debemos enfrentarnos al tratamiento del dataset, conocer y preprocesar cada variable, este trabajo lo hemos realizado en los siguientes notebooks: 
 
-  :page_facing_up: [Preprocesing. Limpieza del Dataset](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/2.0.1.%20%20Preprocesing.%20Limpieza%20Dataset.%20.ipynb)
+  :page_facing_up: **[Preprocesing. Limpieza del Dataset](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/2.0.1.%20%20Preprocesing.%20Limpieza%20Dataset.%20.ipynb)**
 
-  :page_facing_up: [Preprocesing. Análisis de variables](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/2.0.2.%20Preprocesing.%20Analisis%20de%20las%20variables.%20.ipynb)
+  :page_facing_up: **[Preprocesing. Análisis de variables](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/2.0.2.%20Preprocesing.%20Analisis%20de%20las%20variables.%20.ipynb)**
 
-  :page_facing_up: [Preprocesing. Split, NA, Outlier](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/2.0.3.%20Preprocesing.%20SPLIT%2C%20NA%2C%20OUTLIER.%20.ipynb)
+  :page_facing_up: **[Preprocesing. Split, NA, Outlier](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/2.0.3.%20Preprocesing.%20SPLIT%2C%20NA%2C%20OUTLIER.%20.ipynb)**
   
-  :page_facing_up: [Preprocesing. Seleccion de variables](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/2.0.4.%20Preprocesing.%20Seleccion%20de%20Variables..ipynb)
+  :page_facing_up: **[Preprocesing. Seleccion de variables](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/2.0.4.%20Preprocesing.%20Seleccion%20de%20Variables..ipynb)**
 
 ### *Ajuste y evaluación de los modelos*: 
 Una vez realizado el EDA y el preprocesamiento, tenemos dividida nuestra muestra entre train y test. Toca realizar los modelos de predicción del primero objetivo establecido, que es la detección de mortalidad en un accidente de trafico, por lo tanto nos encontramos ante un problema de clasificación (muerte, no muerte) del que queremos extraer una predicción en tanto porcentual.
@@ -69,19 +69,51 @@ Este proceso se repite hasta llegar a un punto en el que la diferencia entre mod
 #### Modelo LightGBM [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.5.%20Modelos%20LightGBM.ipynb)
 [`LightGBM`](https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc) es un algoritmo de refuerzo (o también de potenciación) de gradientes (gradient boosting) basado en modelos de árboles de decisión. Puede ser utilizado para la categorización, clasificación y muchas otras tareas de aprendizaje automático, en las que es necesario maximizar o minimizar una función objetivo mediante la técnica de gradient boosting, que consiste en combinar clasificadores sencillos, como por ejemplo árboles de decisión de profundidad limitada.
 
+#### Modelo Support Vector Machine [:bookmark_tabs: Link](http://localhost:8888/notebooks/Desktop/CUNEF/Practica_Machine_Learning/Practica-1-ML/notebooks/3.0.6.%20Modelos.%20SVM.ipynb)
+
+[`SVM`]( https://www.datacamp.com/community/tutorials/svm-classification-scikit-learn-python)ofrece una precisión muy alta en comparación con otros clasificadores, como la regresión logística y los árboles de decisión. `SVM` es un clasificador que separa los puntos de datos usando un hiperplano con el mayor margen posible, es por lo que tambien se le conoce como un clasificador discriminativo. SVM se encarga de encontrar el mejor hiperplano para clasificar. 
+
+Parametros de [`SVM`](https://scikit-learn.org/stable/modules/svm.html):
+
+- Kernel: Puede ser Lineal, Polynomial, y Radial Basis Function Kernel, este ultimo es el mas utilizado en problemas de clasificación y el que pensamos utilizar. Tambien nos encontramos con sigmoid para distribuciones de probabilidad. 
+
+- Gamma: Parametro usado si utilizas 'rbf'. Puede ser scale, si se quiere utilizar la variación de los elementos. o auto para no utilizarla. Por defecto esta Scale. que es la que probaremos. 
+
+- Clash_weight: El peso que se le atribuye a cada clase. Probaremos. 
+
+#### Modelo Voting Classifier [:bookmark_tabs: Link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.7.%20Voting%20Classifier%20.ipynb)
+La idea detrás de un ([`VotingClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html)) es combinar clasificadores conceptualmente diferentes y utilizar un voto mayoritario (*hard*) o las probabilidades promedio pronosticadas (*soft-voting*) para predecir las etiquetas. 
+
+Este clasificador puede ser útil para un conjunto de modelos con un rendimiento igualmente bueno, a fin de equilibrar sus debilidades individuales.
+
+
+__El que mejor predicción hemos obtenido es el lightGBM, volvemos a realizar este modelo pero utilizando pipelines. ([Ver link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.9.%20EXTRA%20LightGBM%20con%20Pipeline.ipynb))__
+
+### INTERPRETABILIDAD: 
+
+La [`interpretabilidad`](https://christophm.github.io/interpretable-ml-book/interpretability.html) en Machine Learning es el grado de comprensión que tiene un ser humano sobre la decisión que toma un algoritmo. Es decir, la explicación o el razonamiento que le da a la conclusión final. Muchas veces, un algoritmo puede predecir con fiabilidad un problema planteado con soluciones no contempladas por el ser humano a la hora de introducir los datos. Es por ello que queremos interpretar los datos que hemos obtenido de nuestro mejor modelo, [`LightGBM`](http://localhost:8888/notebooks/Desktop/CUNEF/Practica%20Machine%20Learning/project_template/notebooks/3.0.5.%20Modelos%20LightGBM.ipynb). 
+
+Para interpretar nuestro modelo utilizaremos una combinación de los modelos de interpretación de [`ELI5`](https://eli5.readthedocs.io/en/latest/) y [`LIME`](https://lime.readthedocs.io/en/latest/) llamada [`SHAP o (SHapley Additive exPlanations)`](https://shap.readthedocs.io/en/latest/index.html) que contiene un enfoque de teoria de juegos para explicar el resultado de cualquier modelo de aprendizaje automático. 
+
+El objetivo de `SHAP` es explicar la predicción de una instancia x calculando la contribución de cada característica a la predicción.
+
+:page_facing_up: **[Puedes ver el notebook de trabajo aquí](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.8.%20Interpretabilidad.ipynb)**
 
 
 
-Trabajo realizado por: 
+# Trabajo realizado por: 
 
-- NOMBRE: SERGIO RANZ CASADO.
-- CORREO: sergio.ranz@cunef.edu
-- GITHUB: https://github.com/sergerc
+:bust_in_silhouette: SERGIO RANZ CASADO.
+
+:mailbox: sergio.ranz@cunef.edu
+
+:link: https://www.linkedin.com/in/sergio-ranz-casado-3318b713a/
 
 
-- NOMBRE: MARCOS MEDINA COGOLLUDO
-- CORREO: marcos.medina@cunef.edu
-- GITHUB: https://github.com/marcosmedina97
 
-No hemos podido subir el csv debido a su peso. Dejamos aqui el enlace para su descarga: https://www.kaggle.com/tbsteal/canadian-car-accidents-19942014?select=drivingLegend.pdf
 
+:bust_in_silhouette: MARCOS MEDINA COGOLLUDO
+
+:mailbox: marcos.medina@cunef.edu
+
+:link: https://github.com/marcosmedina97
