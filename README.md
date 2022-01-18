@@ -113,7 +113,7 @@ Enumeramos a continuación las métricas que vamos a utilizar:
 - [`Lift Curve`](https://towardsdatascience.com/meaningful-metrics-cumulative-gains-and-lyft-charts-7aac02fc5c14#:~:text=The%20cumulative%20gains%20curve%20is,target%20according%20to%20the%20model.) Mide la cantidad de ganancias que tiene nuestro modelo aplicandolo con respecto a la selección aleatorio.  Nos indica cuanto vale la pena implementar ese modelo. 
 
 
-__El que mejor predicción hemos obtenido es el lightGBM, volvemos a realizar este modelo pero utilizando pipelines. ([Ver link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.9.%20EXTRA%20LightGBM%20con%20Pipeline.ipynb))__
+:arrow_forward: __El que mejor predicción hemos obtenido es el lightGBM, volvemos a realizar este modelo pero utilizando pipelines. ([Ver link](https://github.com/sergerc/Accidentes_canada_ML/blob/main/notebooks/3.0.9.%20EXTRA%20LightGBM%20con%20Pipeline.ipynb))__
 
 ### INTERPRETABILIDAD: 
 
